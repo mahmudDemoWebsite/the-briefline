@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="The Briefline - Independent journalism, global perspectives and stories that matter.">
+  <title>The Briefline | Independent News</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind = {
+      config: {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              paper: "#F5F3ED",
+              ink: "#192722",
+              muted: "#737D76",
+              accent: "#C94D3A",
+              gold: "#D5A653",
+              night: "#131B18",
+              panel: "#202C26"
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              editorial: ["Playfair Display", "serif"]
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-paper text-ink font-sans dark:bg-night dark:text-stone-100 transition-colors duration-300"
+  data-page="home">
+
+  <!-- Top information bar -->
+  <div class="bg-ink text-stone-300 text-[11px] tracking-wide">
+    <div class="max-w-7xl mx-auto px-5 py-2 flex justify-between">
+      <span id="currentDate">Independent Journalism</span>
+      <span class="hidden sm:block">INDEPENDENT JOURNALISM. GLOBAL PERSPECTIVE.</span>
+      <span>EST. 2026</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-paper dark:bg-night border-b border-stone-200 dark:border-stone-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="h-24 flex items-center justify-between">
+
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-accent text-white grid place-items-center font-editorial text-4xl font-bold">B</div>
+          <div>
+            <div class="font-editorial text-2xl leading-none tracking-tight">THE <b>BRIEFLINE</b></div>
+            <div class="text-[9px] tracking-[3px] text-muted mt-2">NEWS THAT MATTERS</div>
+          </div>
+        </a>
+
+        <div class="hidden lg:block text-center">
+          <p class="text-[10px] uppercase tracking-[3px] text-muted">The world's stories</p>
+          <p class="font-editorial text-sm italic mt-1">Stay informed. Stay ahead.</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="searchToggle"
+            class="w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 hover:bg-accent hover:text-white transition"
+            aria-label="Search">⌕</button>
+          <button id="themeToggle"
+            class="w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 hover:bg-accent hover:text-white transition"
+            aria-label="Toggle theme">☾</button>
+          <button id="menuToggle"
+            class="lg:hidden w-10 h-10 border border-stone-300 dark:border-stone-700 rounded-full">☰</button>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="navMenu" class="hidden lg:flex items-center gap-9 h-12 border-t border-stone-200 dark:border-stone-800">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="world.html" class="nav-link">World</a>
+        <a href="technology.html" class="nav-link">Technology</a>
+        <a href="sports.html" class="nav-link">Sports</a>
+        <a href="index.html#latest" class="nav-link">Latest News</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <span class="ml-auto text-[10px] tracking-widest text-muted">READ BEYOND THE HEADLINES</span>
+      </nav>
+
+      <!-- Search bar -->
+      <div id="searchPanel" class="hidden py-4 border-t border-stone-200 dark:border-stone-800">
+        <input id="searchInput" type="search" placeholder="Search stories, topics and headlines..."
+          class="w-full bg-white dark:bg-panel border border-stone-200 dark:border-stone-700 rounded-lg px-5 py-3 outline-none focus:border-accent">
+        <p class="text-xs text-muted mt-2">Search stories displayed on this page.</p>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Breaking news -->
+    <section class="bg-accent text-white">
+      <div class="max-w-7xl mx-auto px-5 py-3 flex items-center gap-4">
+        <span class="bg-white text-accent text-[10px] font-extrabold tracking-widest px-3 py-1 shrink-0">BREAKING</span>
+        <p class="text-xs sm:text-sm">Global leaders explore new possibilities for international cooperation and
+          sustainable development.</p>
+        <span class="ml-auto w-2 h-2 bg-white rounded-full animate-pulse"></span>
+      </div>
+    </section>
+
+    <!-- Hero area -->
+    <section class="max-w-7xl mx-auto px-5 pt-10 pb-14">
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <!-- Featured story -->
+        <div class="lg:col-span-8">
+
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-[2px] bg-accent"></span>
+            <span class="text-[10px] font-extrabold tracking-[3px] text-accent">TODAY'S COVER STORY</span>
+          </div>
+
+          <a href="article.html?story=global-shift" class="story-card block group"
+            data-search="global world international cooperation future global affairs">
+            <div class="relative overflow-hidden h-[280px] sm:h-[420px]">
+              <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1500&q=85"
+                alt="Newspapers and journalism"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <span class="absolute bottom-5 left-5 bg-accent text-white text-[10px] tracking-widest px-4 py-2">WORLD
+                FEATURE</span>
+            </div>
+
+            <div class="pt-6">
+              <h1 class="font-editorial text-3xl sm:text-5xl leading-[1.15] group-hover:text-accent transition">
+                A Changing World: The Stories Shaping Tomorrow
+              </h1>
+              <p class="text-muted dark:text-stone-400 mt-4 max-w-3xl leading-7 text-sm sm:text-base">
+                From global developments to everyday discoveries, explore the ideas and decisions shaping our shared
+                future.
+              </p>
+
+              <div class="flex flex-wrap gap-5 text-[11px] text-muted mt-5">
+                <span>By Editorial Desk</span>
+                <span>November 12, 2026</span>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Editor's picks -->
+        <aside class="lg:col-span-4 lg:border-l lg:border-stone-200 lg:dark:border-stone-800 lg:pl-7">
+
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-editorial text-2xl">Editor's Picks</h2>
+            <span class="text-accent text-xs">01 — 03</span>
+          </div>
+
+          <article class="story-card flex gap-4 border-b border-stone-200 dark:border-stone-800 pb-5 mb-5"
+            data-search="technology artificial intelligence digital innovation">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
+              class="w-28 h-28 object-cover" alt="Technology">
+            <div>
+              <p class="text-accent text-[9px] font-extrabold tracking-widest mb-2">TECHNOLOGY</p>
+              <h3 class="font-editorial text-lg leading-snug hover:text-accent transition">
+                <a href="article.html?story=ai-tools">How AI Is Opening New Doors for Human Creativity</a>
+              </h3>
+              <p class="text-xs text-muted mt-2">5 min read</p>
+            </div>
+          </article>
+
+          <article class="story-card flex gap-4 border-b border-stone-200 dark:border-stone-800 pb-5 mb-5"
+            data-search="environment climate sustainability nature">
+            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=400&q=80"
+              class="w-28 h-28 object-cover" alt="Green nature">
+            <div>
+              <p class="text-accent text-[9px] font-extrabold tracking-widest mb-2">ENVIRONMENT</p>
+              <h3 class="font-editorial text-lg leading-snug hover:text-accent transition">
+                <a href="article.html?story=climate-action">The Search for a More Sustainable Future</a>
+              </h3>
+              <p class="text-xs text-muted mt-2">4 min read</p>
+            </div>
+          </article>
+
+          <article class="story-card flex gap-4" data-search="sports athletics competition athlete">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=400&q=80"
+              class="w-28 h-28 object-cover" alt="Sports athlete">
+            <div>
+              <p class="text-accent text-[9px] font-extrabold tracking-widest mb-2">SPORTS</p>
+              <h3 class="font-editorial text-lg leading-snug hover:text-accent transition">
+                <a href="article.html?story=athlete-generation">A New Generation Is Reshaping Modern Sports</a>
+              </h3>
+              <p class="text-xs text-muted mt-2">3 min read</p>
+            </div>
+          </article>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- Latest stories -->
+    <section id="latest" class="bg-white dark:bg-panel py-16 border-y border-stone-200 dark:border-stone-800">
+      <div class="max-w-7xl mx-auto px-5">
+
+        <div class="flex items-end justify-between mb-9">
+          <div>
+            <p class="text-accent text-[10px] font-bold tracking-[3px] mb-2">THE LATEST</p>
+            <h2 class="font-editorial text-3xl sm:text-4xl">Stories Worth Your Time</h2>
+          </div>
+          <a href="world.html" class="text-xs font-bold text-accent hidden sm:block">EXPLORE ALL NEWS →</a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+          <article class="story-card group" data-search="global world international affairs">
+            <a href="article.html?story=global-shift" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80"
+                alt="Earth from space" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">WORLD</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=global-shift">Understanding the Challenges of a Connected World</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">A closer look at the forces changing relationships between nations and
+                communities.</p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 12, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="global-shift"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card group" data-search="technology artificial intelligence innovation future">
+            <a href="article.html?story=ai-tools" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                alt="Artificial intelligence"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">TECHNOLOGY</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=ai-tools">How AI Is Opening New Doors for Human Creativity</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">Discover how intelligent tools are changing the creative landscape.</p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 11, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="ai-tools"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card group" data-search="sports athlete generation running competition">
+            <a href="article.html?story=athlete-generation" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+                alt="Sports cycling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">SPORTS</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=athlete-generation">A New Generation Is Reshaping Modern Sports</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">Training, determination and technology are changing athletic
+                performance.</p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 10, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="athlete-generation"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card group" data-search="climate environment sustainability nature">
+            <a href="article.html?story=climate-action" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=80"
+                alt="Nature landscape" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">ENVIRONMENT</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=climate-action">The Search for a More Sustainable Future</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">How communities are exploring smarter ways to protect the natural
+                world.</p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 09, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="climate-action"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card group" data-search="business economy city market global">
+            <a href="article.html?story=future-cities" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Modern architecture"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">BUSINESS</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=future-cities">How Cities Are Preparing for a Changing Economy</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">New ideas are influencing the future of urban development and business.
+              </p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 08, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="future-cities"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card group" data-search="education digital learning innovation future work">
+            <a href="article.html?story=future-work" class="block overflow-hidden aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                alt="Digital learning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </a>
+            <div class="pt-5">
+              <span class="text-accent text-[10px] font-extrabold tracking-widest">EDUCATION</span>
+              <h3 class="font-editorial text-xl mt-2 leading-snug group-hover:text-accent">
+                <a href="article.html?story=future-work">The Future of Learning in a Digital World</a>
+              </h3>
+              <p class="text-sm text-muted mt-3">Technology is creating different possibilities for students and
+                educators.</p>
+              <div
+                class="flex justify-between items-center mt-5 border-t border-stone-200 dark:border-stone-700 pt-3 text-xs text-muted">
+                <span>Nov 07, 2026</span>
+                <button class="bookmark-btn text-xl hover:text-accent" data-save="future-work"
+                  aria-label="Bookmark">♡</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="max-w-7xl mx-auto px-5 py-16">
+      <div class="bg-ink text-white p-8 sm:p-14 grid md:grid-cols-2 items-center gap-10">
+        <div>
+          <p class="text-gold text-[10px] tracking-[3px] font-bold">THE BRIEFLINE LETTER</p>
+          <h2 class="font-editorial text-3xl sm:text-4xl mt-3">The world, in your inbox.</h2>
+          <p class="text-stone-400 text-sm mt-4 max-w-md">A thoughtful selection of important stories, fresh
+            perspectives and essential reads.</p>
+        </div>
+        <form class="newsletter-form flex flex-col sm:flex-row gap-2">
+          <input type="email" required placeholder="Enter your email address"
+            class="flex-1 bg-white/10 border border-white/20 px-4 py-4 outline-none text-white placeholder:text-stone-400">
+          <button class="bg-accent px-7 py-4 text-sm font-bold hover:bg-red-700 transition">SUBSCRIBE →</button>
+          <p class="form-message text-xs text-gold sm:absolute mt-2"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="about" class="bg-ink text-white pt-14">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+
+        <div>
+          <a href="index.html" class="flex gap-3 items-center">
+            <span class="w-11 h-11 bg-accent grid place-items-center font-editorial text-3xl">B</span>
+            <span class="font-editorial text-xl">THE BRIEFLINE</span>
+          </a>
+          <p class="text-stone-400 text-sm leading-7 mt-5">Independent journalism. Clear perspectives. Stories that
+            matter.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-sm mb-5">Explore</h3>
+          <div class="flex flex-col gap-3 text-sm text-stone-400">
+            <a href="world.html" class="hover:text-white">World News</a>
+            <a href="technology.html" class="hover:text-white">Technology</a>
+            <a href="sports.html" class="hover:text-white">Sports</a>
+            <a href="index.html#latest" class="hover:text-white">Latest Stories</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-sm mb-5">Our Mission</h3>
+          <p class="text-sm text-stone-400 leading-7">To inform, inspire and encourage a better understanding of our
+            changing world through meaningful journalism.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-sm mb-5">Follow The Briefline</h3>
+          <div class="flex flex-col gap-3 text-sm text-stone-400">
+            <a href="#" class="hover:text-white">Facebook</a>
+            <a href="#" class="hover:text-white">Instagram</a>
+            <a href="#" class="hover:text-white">YouTube</a>
+            <a href="#" class="hover:text-white">Contact the Editorial Desk</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div
+        class="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between gap-3 text-[11px] text-stone-500">
+        <span>© <span class="currentYear">2026</span> The Briefline. All rights reserved.</span>
+        <span>Independent by nature. Informed by facts.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                paper: "#F5F3ED",
+                ink: "#192722",
+                muted: "#737D76",
+                accent: "#C94D3A",
+                gold: "#D5A653",
+                night: "#131B18",
+                panel: "#202C26"
+            },
+            fontFamily: {
+                sans: ["DM Sans", "sans-serif"],
+                editorial: ["Playfair Display", "serif"]
+            }
+        }
+    }
+};
+</script>
+
+</body>
+
+</html>

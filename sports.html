@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports | The Briefline</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind = {
+            config: {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            paper: "#F5F3ED",
+                            ink: "#192722",
+                            muted: "#737D76",
+                            accent: "#C94D3A",
+                            gold: "#D5A653",
+                            night: "#131B18",
+                            panel: "#202C26"
+                        },
+                        fontFamily: {
+                            sans: ["DM Sans", "sans-serif"],
+                            editorial: ["Playfair Display", "serif"]
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-paper text-ink font-sans dark:bg-night dark:text-stone-100" data-page="sports">
+
+    <div class="bg-ink text-stone-300 text-[11px] tracking-wide">
+        <div class="max-w-7xl mx-auto px-5 py-2 flex justify-between">
+            <span id="currentDate">Independent Journalism</span>
+            <span class="hidden sm:block">INDEPENDENT JOURNALISM. GLOBAL PERSPECTIVE.</span>
+            <span>EST. 2026</span>
+        </div>
+    </div>
+
+    <header class="bg-paper dark:bg-night border-b border-stone-200 dark:border-stone-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="h-24 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-12 h-12 bg-accent text-white grid place-items-center font-editorial text-4xl font-bold">
+                        B</div>
+                    <div>
+                        <div class="font-editorial text-2xl leading-none">THE <b>BRIEFLINE</b></div>
+                        <div class="text-[9px] tracking-[3px] text-muted mt-2">NEWS THAT MATTERS</div>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-2">
+                    <button id="searchToggle"
+                        class="w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 hover:bg-accent hover:text-white">⌕</button>
+                    <button id="themeToggle"
+                        class="w-10 h-10 rounded-full border border-stone-300 dark:border-stone-700 hover:bg-accent hover:text-white">☾</button>
+                    <button id="menuToggle"
+                        class="lg:hidden w-10 h-10 border border-stone-300 dark:border-stone-700 rounded-full">☰</button>
+                </div>
+            </div>
+
+            <nav id="navMenu"
+                class="hidden lg:flex items-center gap-9 h-12 border-t border-stone-200 dark:border-stone-800">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="sports.html" class="nav-link active">Sports</a>
+                <a href="index.html#latest" class="nav-link">Latest News</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+
+            <div id="searchPanel" class="hidden py-4 border-t border-stone-200 dark:border-stone-800">
+                <input id="searchInput" type="search" placeholder="Search sports stories..."
+                    class="w-full bg-white dark:bg-panel border border-stone-200 dark:border-stone-700 rounded-lg px-5 py-3 outline-none focus:border-accent">
+                <p class="text-xs text-muted mt-2">Search stories displayed on this page.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-5 py-14">
+
+        <section class="border-b border-stone-300 dark:border-stone-700 pb-8 mb-9">
+            <span class="text-accent text-[10px] tracking-[4px] font-bold">THE SPIRIT OF COMPETITION</span>
+            <h1 class="font-editorial text-5xl sm:text-7xl mt-3">Sports <span class="text-accent">& Beyond.</span></h1>
+            <p class="text-muted mt-4 max-w-2xl">Athletes, achievements and the moments that bring people together.</p>
+        </section>
+
+        <!-- Featured sports story -->
+        <section class="grid md:grid-cols-2 bg-white dark:bg-panel border border-stone-200 dark:border-stone-800 mb-14">
+
+            <a href="article.html?story=athlete-generation" class="story-card overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=85"
+                    alt="Athlete running on a track"
+                    class="w-full h-full min-h-[280px] object-cover group-hover:scale-105 transition duration-700">
+            </a>
+
+            <div class="p-7 sm:p-10 flex flex-col justify-center">
+                <span class="text-accent text-[10px] font-extrabold tracking-[3px]">SPORTS FEATURE</span>
+                <h2 class="font-editorial text-3xl sm:text-4xl mt-4 leading-tight">
+                    <a href="article.html?story=athlete-generation" class="hover:text-accent">A New Generation Is
+                        Changing the World of Sports</a>
+                </h2>
+                <p class="text-muted text-sm leading-7 mt-5">Young athletes, new training methods and changing fan
+                    experiences are bringing fresh energy to competitive sports.</p>
+                <div class="flex gap-5 text-xs text-muted mt-5">
+                    <span>Sports Desk</span>
+                    <span>November 12, 2026</span>
+                </div>
+                <a href="article.html?story=athlete-generation" class="text-accent text-xs font-bold mt-7">READ THE FULL
+                    STORY →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-editorial text-3xl">The Sports Desk</h2>
+            <span class="text-accent text-xs font-bold tracking-widest">LATEST COVERAGE</span>
+        </div>
+
+        <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+            <article class="story-card group" data-search="athletics athlete competition performance">
+                <a href="article.html?story=athlete-generation" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+                        alt="Cycling competition"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">ATHLETICS</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=athlete-generation">A New Generation Is Reshaping Modern Sports</a>
+                    </h3>
+                    <p class="text-sm text-muted mt-3">Training, determination and technology are changing athletic
+                        performance.</p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 12, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="athlete-generation">♡</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="story-card group" data-search="basketball strategy team competition">
+                <a href="article.html?story=basketball" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80"
+                        alt="Basketball"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">BASKETBALL</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=basketball">The Skills and Strategies Behind Modern Basketball</a>
+                    </h3>
+                    <p class="text-sm text-muted mt-3">Teamwork and preparation remain at the heart of the game.</p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 11, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="basketball">♡</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="story-card group" data-search="football soccer fans international">
+                <a href="article.html?story=football-global" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+                        alt="Football" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">FOOTBALL</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=football-global">Football's Global Community Continues to Grow</a>
+                    </h3>
+                    <p class="text-sm text-muted mt-3">Clubs, competitions and supporters connect people around the
+                        world.</p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 10, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="football-global">♡</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="story-card group" data-search="cricket stadium fans sport">
+                <a href="article.html?story=cricket-culture" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80"
+                        alt="Cricket ground"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">CRICKET</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=cricket-culture">Cricket Continues to Unite Fans Across
+                            Generations</a></h3>
+                    <p class="text-sm text-muted mt-3">Traditions and evolving formats continue to attract new
+                        audiences.</p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 09, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="cricket-culture">♡</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="story-card group" data-search="fitness training recovery athletes">
+                <a href="article.html?story=sports-recovery" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+                        alt="Fitness training"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">FITNESS</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=sports-recovery">Why Recovery Is an Essential Part of Athletic
+                            Training</a></h3>
+                    <p class="text-sm text-muted mt-3">Rest and consistency play important roles in long-term
+                        performance.</p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 08, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="sports-recovery">♡</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="story-card group" data-search="community young people sports programs">
+                <a href="article.html?story=community-sports" class="block overflow-hidden aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=800&q=80"
+                        alt="Community sports"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </a>
+                <div class="pt-4">
+                    <span class="text-accent text-[10px] tracking-widest font-bold">COMMUNITY</span>
+                    <h3 class="font-editorial text-xl mt-2 leading-snug hover:text-accent"><a
+                            href="article.html?story=community-sports">Community Sports Programs Help Young People
+                            Thrive</a></h3>
+                    <p class="text-sm text-muted mt-3">Local initiatives make sport more accessible to young athletes.
+                    </p>
+                    <div
+                        class="border-t border-stone-200 dark:border-stone-700 mt-5 pt-3 flex justify-between text-xs text-muted">
+                        <span>Nov 07, 2026</span>
+                        <button class="bookmark-btn text-xl" data-save="community-sports">♡</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer id="about" class="bg-ink text-white pt-12">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10">
+                <div>
+                    <div class="font-editorial text-2xl">THE BRIEFLINE</div>
+                    <p class="text-sm text-stone-400 mt-4 leading-7">Independent journalism. Clear perspectives. Stories
+                        that matter.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Explore</h3>
+                    <div class="flex flex-col gap-3 text-sm text-stone-400">
+                        <a href="index.html">Home</a>
+                        <a href="world.html">World</a>
+                        <a href="technology.html">Technology</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Our Mission</h3>
+                    <p class="text-sm text-stone-400 leading-7">To celebrate achievement, explore competition and tell
+                        meaningful sports stories.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Follow Us</h3>
+                    <div class="flex flex-col gap-3 text-sm text-stone-400">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-5 flex justify-between text-xs text-stone-500">
+                <span>© <span class="currentYear">2026</span> The Briefline</span>
+                <span>Stories that matter.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        paper: "#F5F3ED",
+                        ink: "#192722",
+                        accent: "#C94D3A",
+                        night: "#131B18",
+                        panel: "#202C26"
+                    },
+                    fontFamily: {
+                        sans: ["DM Sans", "sans-serif"],
+                        editorial: ["Playfair Display", "serif"]
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
